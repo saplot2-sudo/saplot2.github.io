@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8" />
+	
+	<script>
+		(function() {
+			var savedTheme = localStorage.getItem('theme');
+			var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+				document.documentElement.classList.add('dark');
+			}
+		})();
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	
+	<title>Series | Write-up</title>
+
+	
+	<meta name="description" content="Vitis - A modern Hugo theme designed as a digital garden with Obsidian-like features">
+
+	
+		
+
+	
+	
+	<meta name="author" content="Your Name">
+	
+
+	
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	
+	<link rel="canonical" href="http://localhost:1313/series/">
+
+	
+	
+	<link rel="alternate" hreflang="en" href="http://localhost:1313/series/">
+	
+	
+
+	
+	<meta property="og:site_name" content="Write-up">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Series">
+	<meta property="og:description" content="Vitis - A modern Hugo theme designed as a digital garden with Obsidian-like features">
+	<meta property="og:url" content="http://localhost:1313/series/">
+
+	
+
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@yourusername">
+	<meta name="twitter:creator" content="@yourusername">
+	<meta name="twitter:title" content="Series">
+	<meta name="twitter:description" content="Vitis - A modern Hugo theme designed as a digital garden with Obsidian-like features">
+
+	
+
+	
+	
+	
+	
+	
+
+	
+	
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+	
+	
+	
+	
+	
+
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	
+	<link rel="stylesheet" href="/css/output.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/css/syntax.css" type="text/css" media="all" />
+
+	
+	
+	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/series/index.xml" title="Write-up" />
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body class="font-custom min-h-screen flex flex-col bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-100 antialiased">
+
+	<header class="sticky top-0 z-50 w-full border-b border-stone-200 dark:border-stone-800 bg-white/95 dark:bg-stone-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-stone-950/60">
+  <nav class="container max-w-3xl mx-auto px-4 md:px-6">
+    <div class="flex h-16 items-center justify-between">
+      
+      <a class="flex items-center gap-2.5" href="http://localhost:1313/">
+        <span class="text-xl">🌿</span>
+        <span class="text-stone-900 dark:text-stone-100 text-lg font-bold">Write-up</span>
+      </a>
+
+      
+      <div class="flex items-center gap-1">
+        <ul class="hidden md:flex items-center gap-1">
+          
+          <li>
+            <a class="px-4 py-2 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+               href="/">
+              Home
+            </a>
+          </li>
+          
+          <li>
+            <a class="px-4 py-2 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+               href="/posts">
+              Posts
+            </a>
+          </li>
+          
+          <li>
+            <a class="px-4 py-2 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+               href="/series">
+              Series
+            </a>
+          </li>
+          
+          <li>
+            <a class="px-4 py-2 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+               href="/projects">
+              Projects
+            </a>
+          </li>
+          
+          <li>
+            <a class="px-4 py-2 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+               href="/graph">
+              Graph
+            </a>
+          </li>
+          
+        </ul>
+
+        
+        <button aria-label="Search" onclick="openSearch()"
+                class="p-2.5 rounded-md text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle>
+    <path d="m21 21-4.3-4.3"></path>
+</svg>
+
+        </button>
+
+        
+        <button aria-label="Toggle theme" id="toggle-theme" 
+                class="p-2.5 rounded-md text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          <svg class="moon-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 10.999c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm8.001.001c.958.293 1.707 1.042 2 2.001.291-.959 1.042-1.709 1.999-2.001-.957-.292-1.707-1.042-2-2-.293.958-1.042 1.708-1.999 2zm-1-9c-.437 1.437-1.563 2.562-2.998 3.001 1.438.44 2.561 1.564 3.001 3.002.437-1.438 1.563-2.563 2.996-3.002-1.433-.437-2.559-1.564-2.999-3.001zm-7.001 22c-6.617 0-12-5.383-12-12s5.383-12 12-12c1.894 0 3.63.497 5.37 1.179-2.948.504-9.37 3.266-9.37 10.821 0 7.454 5.917 10.208 9.37 10.821-1.5.846-3.476 1.179-5.37 1.179z"/>
+</svg>
+          <svg class="sun-icon hidden w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm2.312-4.897c0 2.206 1.794 4 4 4s4-1.794 4-4-1.794-4-4-4-4 1.794-4 4zm10 0c0 3.314-2.686 6-6 6s-6-2.686-6-6 2.686-6 6-6 6 2.686 6 6z"/>
+</svg>
+        </button>
+
+        
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-md hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    
+    <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-stone-200 dark:border-stone-800">
+      <ul class="flex flex-col gap-1">
+        
+        <li>
+          <a class="block px-4 py-2.5 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+             href="/">
+            Home
+          </a>
+        </li>
+        
+        <li>
+          <a class="block px-4 py-2.5 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+             href="/posts">
+            Posts
+          </a>
+        </li>
+        
+        <li>
+          <a class="block px-4 py-2.5 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+             href="/series">
+            Series
+          </a>
+        </li>
+        
+        <li>
+          <a class="block px-4 py-2.5 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+             href="/projects">
+            Projects
+          </a>
+        </li>
+        
+        <li>
+          <a class="block px-4 py-2.5 rounded-md text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors font-medium" 
+             href="/graph">
+            Graph
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+	<main class="content container max-w-3xl mx-auto flex-1 py-8 px-4 md:px-6">
+
+
+<div class="mb-8">
+  <h1 class="text-2xl md:text-3xl font-bold text-stone-900 dark:text-stone-100 mb-3">
+    Series
+  </h1>
+  <p class="text-stone-500 dark:text-stone-400">
+    Collections of related articles on a single topic
+  </p>
+</div>
+
+
+<div class="text-center py-12">
+  <div class="text-4xl mb-4">📚</div>
+  <p class="text-stone-500 dark:text-stone-400">No series yet</p>
+</div>
+
+
+	</main>
+
+	
+	<footer class="border-t border-stone-200 dark:border-stone-800 mt-16">
+		<div class="container max-w-3xl mx-auto px-4 md:px-6 py-8">
+			<div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+				
+				<div class="flex items-center gap-2 text-stone-500 dark:text-stone-400">
+					<span>🌿</span>
+					<span>Write-up</span>
+					<span class="text-stone-300 dark:text-stone-600">·</span>
+					<span>&copy; 2026</span>
+				</div>
+
+				
+				<div class="flex items-center gap-1">
+					
+					<a href="https://www.github.com/yourusername" target="_blank" rel="noopener" class="p-2 text-stone-400 hover:text-stone-600 dark:hover:text-stone-300 transition-colors">
+						<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+					</a>
+					
+					
+					
+					<a href="mailto:your.email@example.com" class="p-2 text-stone-400 hover:text-stone-600 dark:hover:text-stone-300 transition-colors">
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+						</svg>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	
+<div id="search-modal" class="search-modal hidden" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <div class="search-overlay" onclick="closeSearch()"></div>
+    <div class="search-container">
+        <div class="search-header">
+            <div class="search-input-wrapper">
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"></circle>
+    <path d="m21 21-4.3-4.3"></path>
+</svg>
+
+                <input type="text"
+                       id="search-input"
+                       class="search-input"
+                       placeholder="Search pages and tags..."
+                       autocomplete="off"
+                       autofocus>
+                <kbd class="search-kbd">ESC</kbd>
+            </div>
+        </div>
+        <div id="search-results" class="search-results">
+            <div class="search-empty">
+                <p class="text-stone-500 dark:text-stone-400">Type to search...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script>
+(function() {
+    let searchIndex = null;
+    let fuse = null;
+    const searchModal = document.getElementById('search-modal');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    
+    
+    async function loadSearchIndex() {
+        if (searchIndex) return;
+        try {
+            const response = await fetch('/index.json');
+            searchIndex = await response.json();
+            fuse = new Fuse(searchIndex.nodes || searchIndex, {
+                keys: ['title', 'content', 'tags'],
+                threshold: 0.3,
+                includeScore: true,
+                includeMatches: true,
+                minMatchCharLength: 2
+            });
+        } catch (error) {
+            console.error('Failed to load search index:', error);
+        }
+    }
+    
+    
+    window.openSearch = function() {
+        searchModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        loadSearchIndex();
+        setTimeout(() => searchInput.focus(), 100);
+    }
+    
+    
+    window.closeSearch = function() {
+        searchModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        searchInput.value = '';
+        renderResults([]);
+    }
+    
+    
+    document.addEventListener('keydown', function(e) {
+        
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            e.preventDefault();
+            openSearch();
+        }
+        
+        if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+            closeSearch();
+        }
+    });
+    
+    
+    searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.trim();
+        
+        if (!query) {
+            renderResults([]);
+            return;
+        }
+        
+        if (!fuse) {
+            searchResults.innerHTML = '<div class="search-empty"><p class="text-stone-500">Loading...</p></div>';
+            return;
+        }
+        
+        const results = fuse.search(query, { limit: 10 });
+        renderResults(results);
+    });
+    
+    
+    function renderResults(results) {
+        if (!results || results.length === 0) {
+            const query = searchInput.value.trim();
+            if (query) {
+                searchResults.innerHTML = `
+                    <div class="search-empty">
+                        <p class="text-stone-500 dark:text-stone-400">No results for "${query}"</p>
+                    </div>
+                `;
+            } else {
+                searchResults.innerHTML = `
+                    <div class="search-empty">
+                        <p class="text-stone-500 dark:text-stone-400">Type to search...</p>
+                    </div>
+                `;
+            }
+            return;
+        }
+
+        const html = results.map(result => {
+            const item = result.item;
+            const title = item.title || 'Untitled';
+            const url = item.id || item.url || '#';
+            const tags = item.tags || [];
+            
+            return `
+                <a href="${url}" class="search-result-item" onclick="closeSearch()">
+                    <div class="search-result-title">${highlightMatch(title, result.matches)}</div>
+                    ${tags.length > 0 ? `
+                        <div class="search-result-tags">
+                            ${tags.slice(0, 3).map(tag => `<span class="search-tag">${tag}</span>`).join('')}
+                        </div>
+                    ` : ''}
+                </a>
+            `;
+        }).join('');
+        
+        searchResults.innerHTML = html;
+    }
+    
+    
+    function highlightMatch(text, matches) {
+        if (!matches) return text;
+        const titleMatch = matches.find(m => m.key === 'title');
+        if (!titleMatch) return text;
+        
+        let result = text;
+        const indices = titleMatch.indices.sort((a, b) => b[0] - a[0]);
+        
+        for (const [start, end] of indices) {
+            result = result.slice(0, start) + 
+                     '<mark class="search-highlight">' + 
+                     result.slice(start, end + 1) + 
+                     '</mark>' + 
+                     result.slice(end + 1);
+        }
+        
+        return result;
+    }
+})();
+</script>
+
+
+	<script src="/js/main.js"></script>
+</body>
+</html>
+

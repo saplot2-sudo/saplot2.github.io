@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Ctf on My New Hugo Project</title>
+    <link>http://localhost:1313/tags/ctf/</link>
+    <description>Recent content in Ctf on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Write-up: Прохождение уровней level0 - level6</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h3 id=&#34;level-0&#34;&gt;Level 0&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Задача:&lt;/strong&gt; Найти пароль в файле &lt;code&gt;readme.txt&lt;/code&gt;.
+&lt;strong&gt;Решение:&lt;/strong&gt; Пароль хранился в открытом виде. Для получения списка файлов использовалась команда &lt;code&gt;ls&lt;/code&gt;, а для чтения содержимого — &lt;code&gt;cat&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;level-1&#34;&gt;Level 1&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Задача:&lt;/strong&gt; Найти пароль, который хранится в файле в домашней директории.
+&lt;strong&gt;Решение:&lt;/strong&gt;
+При выполнении команды &lt;code&gt;ls&lt;/code&gt; мы не видим файла с паролем. В Linux файлы, имена которых начинаются с точки (&lt;code&gt;.&lt;/code&gt;), считаются скрытыми. Чтобы их увидеть, необходимо использовать флаг &lt;code&gt;-a&lt;/code&gt; (all) с командой &lt;code&gt;ls&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
