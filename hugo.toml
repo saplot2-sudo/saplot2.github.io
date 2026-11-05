@@ -2,5 +2,5 @@ baseURL = "https://saplot2-sudo.github.io/saplot2.github.io/"
 languageCode = "ru-ru"
 title = "Write-up"
 theme = "PaperMod"
-
+publishDir = "docs"
 
